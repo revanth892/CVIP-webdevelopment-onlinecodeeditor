@@ -8,26 +8,49 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
-  <body>
+  <body onload="run()">
     <section class="container">
-        <h1>Online Editor</h1>
+        <h1>Online Code Editor</h1>
         <div class ="main_panel">
             <div class="left_panel">
-                <label><i class='bx bxl-html5'></i>HTML</label>
-                <textarea id="html_code" spellcheck="false"></textarea>
+                <label>HTML</label>
+                <textarea onkeyup="run()" id="html_code" spellcheck="false">
+<div class='main'>
+<h1>Hello, everyone</h1>
+<h2>This is a Code Playground</h3>
+</div>
+                </textarea>
 
-                <label><i class='bx bxl-css3'></i>CSS</label>
-                <textarea id="css_code" spellcheck="false"></textarea>
+                <label>CSS</label>
+                <textarea onkeyup="run()" id="css_code" spellcheck="false">
+*{
+  font-family:sans-serif;
+  text-align:center; 
+  color:white;
+  background-color: black;
+}
+h1,h2{
+font-weight:600;
+font-size:30
+}
+.main{
+  margin-top:25%
+}
+                </textarea>
 
-                <label><i class='bx bxl-javascript' ></i>JAVASCRIPT</label>
-                <textarea id="js_code" spellcheck="false"></textarea>
+                <label>Javascript</label>
+                <textarea onkeyup="run()" id="js_code" spellcheck="false"></textarea>
             </div>
             <div class="right_panel">
-                <label><i class='bx bx-play' ></i>Output</label>
+                <label>Output:</label>
                 <iframe id="output"></iframe>
             </div>
         </div>
     </section>
-	<script src="script.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
